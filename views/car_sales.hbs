@@ -1,0 +1,47 @@
+{{!-- <div class="container1">
+  <h1>Car Information</h1>
+  <table class="data-table">
+  <tr>
+      <th>InvoiceNo</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Sales_in_thousands</th>
+      <th>__year_resale_value</th>
+      <th>Vehicle_type</th>
+      <th>Price_in_thousands</th>
+      <th>Engine_size</th>
+
+
+  </tr>
+  {{#each data}}
+    <tr>
+     {{#each this}}
+     <td>{{this}}</td>
+        {{/each}}
+    </tr>
+    {{/each}}
+  </table>
+</div> --}}
+
+
+ <div class="container2">
+      {{#each data}}
+        <div class="card ">
+            <img class="card-image" src={{this.image}} alt="Product Image">
+            <div class="card-content">
+                <div class="card-title">{{this.name}}</div>
+                <p class="card-info"><strong>Invoice ID:</strong> {{this.Invoice_ID}}</p>
+                <p class="card-info"><strong>Branch:</strong> {{this.Branch}}</p>
+                <p class="card-info"><strong>City:</strong> {{this.City}}</p>
+                <p class="card-info"><strong>Customer Type:</strong> {{this.Customer_type}}</p>
+                <p class="card-info"><strong>Product Line:</strong> {{this.Product_line}}</p>
+                <p class="card-info"><strong>Date:</strong> {{this.Date}}</p>
+                <p class="card-info"><strong>Time:</strong> {{this.Time}}</p>
+                <p class="card-info"><strong>Payment:</strong> {{this.Payment}}</p>
+                <span class="card-rating">Rating: {{this.Rating}}</span>
+                <p class="card-price">${{this.Unit_price}}</p>
+            </div>
+        </div>
+            {{/each}}
+
+    </div>

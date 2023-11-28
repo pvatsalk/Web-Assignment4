@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Car Information</h1>
+  <table class="data-table">
+  <tr>
+      <th>Invoice</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+  </tr>
+  {{#each data}}
+    <tr>
+        <td>{{this.InvoiceNo}}</td>
+        <td>{{this.Manufacturer}}</td>
+        <td>{{this.Model}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>

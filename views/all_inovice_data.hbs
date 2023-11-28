@@ -1,0 +1,16 @@
+
+<div class="container2">
+      {{#each data}}
+        <div class="card ">
+            <img class="card-image" src={{this.img}} alt="Product Image">
+            <div class="card-content">
+                <div class="card-title">{{this.title}}</div>
+                <p class="card-info"><strong>Author:</strong> {{{this.author}}}</p>
+                <p class="card-info"><strong>inventory:</strong> {{this.inventory}}</p>
+                <span class="card-rating">Category: {{this.category}}</span>
+                <p class="card-price">ISBN: {{this.ISBN}}</p>
+            </div>
+        </div>
+            {{/each}}
+    </div>
+    <!-- books.hbs -->

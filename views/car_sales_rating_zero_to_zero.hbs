@@ -1,0 +1,62 @@
+{{!-- <div class="container1">
+  <h1>Car Information</h1>
+  <table class="data-table">
+  <tr>
+      <th>InvoiceNo</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Sales_in_thousands</th>
+      <th>__year_resale_value</th>
+      <th>Vehicle_type</th>
+      <th>Price_in_thousands</th>
+      <th>Engine_size</th>
+
+
+  </tr>
+  {{#each data}}
+    <tr class="{{chd2 this.Rating}}">
+        <td>{{this.Invoice_ID}}</td>
+        <td>{{this.Branch}}</td>
+        <td>{{this.City}}</td>
+        <td>{{this.Customer_type}}</td>
+        <td>{{this.Product_line}}</td>
+        <td>{{this.name}}</td>
+      <td>  <img src={{this.image}}></td>
+        <td>{{this.Unit_price}}</td>
+        <td>{{this.Quantity}}</td>
+        <td>{{this.Tax_5}}</td>
+        <td>{{this.Total}}</td>
+        <td>{{this.Date}}</td>
+        <td>{{this.Time}}</td>
+        <td>{{this.Payment}}</td>
+        <td>{{this.cogs}}</td>
+        <td>{{this.gross_income}}</td>
+        <td>{{chd1 this.Rating}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div> --}}
+
+
+ <div class="container2">
+      {{#each data}}
+
+        <div class="card {{chd2 this.Rating}}">
+            <img class="card-image" src={{this.image}} alt="Product Image">
+            <div class="card-content">
+                <div class="card-title">{{this.name}}</div>
+                <p class="card-info"><strong>Invoice ID:</strong> {{this.Invoice_ID}}</p>
+                <p class="card-info"><strong>Branch:</strong> {{this.Branch}}</p>
+                <p class="card-info"><strong>City:</strong> {{this.City}}</p>
+                <p class="card-info"><strong>Customer Type:</strong> {{this.Customer_type}}</p>
+                <p class="card-info"><strong>Product Line:</strong> {{this.Product_line}}</p>
+                <p class="card-info"><strong>Date:</strong> {{this.Date}}</p>
+                <p class="card-info"><strong>Time:</strong> {{this.Time}}</p>
+                <p class="card-info"><strong>Payment:</strong> {{this.Payment}}</p>
+                <span class="card-rating">Rating: {{chd1 this.Rating}}</span>
+                <p class="card-price">${{this.Unit_price}}</p>
+            </div>
+        </div>
+            {{/each}}
+
+    </div>
